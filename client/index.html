@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 Predictor 2026</title>
+  <!-- Google Fonts Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Header / Nav -->
+    <header class="app-header">
+      <div class="logo-container">
+        <span class="f1-indicator-bar"></span>
+        <h1 class="app-title">F1 <span>PREDICTOR</span> 2026</h1>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="dashboard-container">
+      <!-- Configuration & Parameters Card -->
+      <section class="card config-card">
+        <h2 class="card-title font-outfit">Race Configurations</h2>
+        <p class="card-desc">Atur parameter cuaca, tipe sirkuit, dan posisi kualifikasi untuk melakukan simulasi hasil
+          balapan.</p>
+
+        <form id="prediction-form" class="config-form">
+          <!-- Weather Selection -->
+          <div class="form-group">
+            <label class="form-label font-outfit">Cuaca Sirkuit</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="weather" value="sunny" checked />
+                <span class="radio-custom">Sunny / Dry</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="weather" value="rainy" />
+                <span class="radio-custom">Wet / Rainy</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Track Type Selection -->
+          <div class="form-group">
+            <label class="form-label font-outfit">Jenis Sirkuit</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="trackType" value="traditional" checked />
+                <span class="radio-custom">Traditional</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="trackType" value="street" />
+                <span class="radio-custom">Street Circuit</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Custom Qualifying Inputs -->
+          <div class="form-group">
+            <label class="form-label font-outfit">Grid Posisi Kualifikasi (P1 - P8)</label>
+            <div class="qualy-inputs-grid" id="qualy-inputs-container">
+              <!-- Inputs will be populated dynamically -->
+            </div>
+          </div>
+
+          <button type="submit" class="btn-predict font-outfit" id="btn-submit">
+            MULAI PREDIKSI BALAPAN
+          </button>
+        </form>
+      </section>
+
+      <!-- Prediction Results Card -->
+      <section class="card results-card">
+        <h2 class="card-title font-outfit">Predicted Grid Finishing Order</h2>
+        <p class="card-desc">Prediksi urutan finish balapan musim 2026 berdasarkan perhitungan statistik & parameter
+          sirkuit.</p>
+
+        <div class="results-wrapper">
+          <div id="results-loader" class="loader-container hidden">
+            <div class="loader"></div>
+            <p class="font-outfit">Menganalisis data & menghitung peluang...</p>
+          </div>
+
+          <div id="results-list" class="results-list">
+            <!-- Predicted results will be populated here -->
+            <div class="placeholder-results">
+              <p>Sesuaikan parameter di sebelah kiri lalu klik tombol prediksi untuk memproses.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>&copy; 2026 F1 Predictor Web.</p>
+    </footer>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

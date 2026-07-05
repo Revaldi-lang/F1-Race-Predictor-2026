@@ -34,7 +34,7 @@ body {
   padding: 2.5rem 1.5rem 1.5rem;
   text-align: center;
   border-bottom: 2px solid var(--f1-red);
-  background: linear-gradient(180deg, rgba(225, 6, 0, 0.08) 0%, rgba(11, 12, 16, 0) 100%);
+  background-color: rgba(225, 6, 0, 0.04);
 }
 
 .logo-container {
@@ -227,7 +227,7 @@ body {
 
 /* Buttons */
 .btn-predict {
-  background: linear-gradient(135deg, var(--f1-red) 0%, #aa0400 100%);
+  background-color: var(--f1-red);
   color: white;
   border: none;
   padding: 1.1rem;
@@ -244,7 +244,7 @@ body {
 .btn-predict:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 20px rgba(225, 6, 0, 0.6);
-  background: linear-gradient(135deg, #ff0800 0%, var(--f1-red) 100%);
+  background-color: #ff1e18;
 }
 
 .btn-predict:active {
@@ -281,7 +281,7 @@ body {
 .predicted-row {
   display: flex;
   align-items: center;
-  background: linear-gradient(90deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);
+  background-color: rgba(255, 255, 255, 0.02);
   border-left: 4px solid var(--text-muted);
   padding: 0.8rem 1rem;
   border-radius: 4px;
@@ -291,7 +291,7 @@ body {
 }
 
 .predicted-row:hover {
-  background: linear-gradient(90deg, rgba(69, 243, 255, 0.08) 0%, rgba(69, 243, 255, 0) 100%);
+  background-color: rgba(69, 243, 255, 0.06);
 }
 
 .predicted-row[data-pos="1"] { border-left-color: #ffd700; } /* Gold */
